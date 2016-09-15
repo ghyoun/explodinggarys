@@ -28,6 +28,19 @@ namespace ConsoleApplication
             return false;
         }
 
+        public Card Favor(Player name)
+        {
+            // force any player to give you 1 card from their hand
+            return Return_Favor();
+        }
+
+        public Card Return_Favor()
+        {
+            Card give_card = new Card(name); 
+            name = 
+            return; 
+        }
+
         public bool Skip()
         {
             // retur false to required deal action
@@ -36,8 +49,9 @@ namespace ConsoleApplication
 
         public void Shuffle_card()
         {
-            // call shuffle function
+            // call shuffle function on  card in deck
             
+
         }
 
         public string[] See_Future()
@@ -49,7 +63,7 @@ namespace ConsoleApplication
 
         public void Nope()
         {
-            // stop any action execpt an exploidng kitten or defuse card 
+            // stop any action below the nope card at anytime execpt an exploidng kitten or defuse card 
             
         }
 
