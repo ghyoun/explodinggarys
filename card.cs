@@ -3,7 +3,6 @@ using System;
 namespace ConsoleApplication
 {
 
-    // -------------- General Card Class -----------------
     public class Card
     {
         public string name; 
@@ -15,21 +14,49 @@ namespace ConsoleApplication
         {
             name = cardName;
         }
-        // +++++++++++++ ACTION CARD METHOD ++++++++++++++++
-        public void Attack()
+
+     
+        public object[] Attack()
         {
-                
+            // return false to required deal action and pass on 2 deals actoin to the next player               
+            object[] attack = new object[] {false,"deal_method_here","deal_method_here"};
+            return attack;
         }
 
-        public void Exploding_Kitten()
+        public bool Exploding_Kitten()
         {
-            //Player.alive = false;
+            // return false to player.alive
+            return false;
         }
 
-        // +++++++++++++ END +++++++++++++++++++++++++++++++
+        public bool Skip()
+        {
+            // retur false to required deal action
+            return false;
+        }
+
+        public void Shuffle_card()
+        {
+            // call shuffle function
+            
+        }
+
+        public string[] See_Future()
+        {
+            // pick first top 3 cards on the top of the deck and return them back in order
+            string[] future = new string[3];
+            return future;
+        }
+
+        public void Nope()
+        {
+
+        }
+
+
 
     }
 
-        // -------------- END --------------------------------
+      
 
 }
