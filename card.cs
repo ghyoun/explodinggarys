@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace ConsoleApplication
 {
@@ -6,10 +7,23 @@ namespace ConsoleApplication
     public class Card
     {
         public string name; 
-        // {"Beard_Cat","CatterMelon","Hairy_Potato_Cat","Rainbow_Cat","Taco_Cat",
-        //"Attack","Defuse,"Exploding_Kitten","Favor","Nope","See_the_Future","Shuffle","Skip"}
-    
+        public Dictionary<string,int> all_cards = new Dictionary<string,int>()
+        {
+            { "Beard_cat", 4 },
+            { "Cattermelon", 4 },
+            { "Hairy_potato_cat", 4 },
+            { "Rainbow_cat", 4 },
+            { "Taco_cat", 4 },
+            { "Attack", 4 },
+            { "Favor", 4 },
+            { "Nope", 5 },
+            { "See_future", 5 },
+            { "Shuffle", 4 },
+            { "Skip", 4 },
 
+        };
+           
+        // "Attack","Defuse","Exploding_Kitten","Favor","Nope","See_the_Future","Shuffle","Skip"};
         public Card(string cardName)
         {
             name = cardName;
@@ -29,48 +43,8 @@ namespace ConsoleApplication
             return false;
         }
 
-        public Card Favor(Player name)
-        {
-            // force any player to give you 1 card from their hand
-            return Return_Favor();
-        }
-
-        public Card Return_Favor()
-        {
-            Card give_card = new Card(name); 
-            name = 
-            return; 
-        }
-
-        public bool Skip()
-        {
-            // retur false to required deal action
-            return false;
-        }
-
-        public void Shuffle_card()
-        {
-            // call shuffle function on  card in deck
-            
-
-        }
-
-        public string[] See_Future()
-        {
-            // pick first top 3 cards on the top of the deck and return them back in order
-            string[] future = new string[3];
-            return future;
-        }
-
-        public void Nope()
-        {
-
-        }
 
 
 
     }
-
-      
-
 }
