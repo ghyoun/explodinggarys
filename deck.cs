@@ -8,9 +8,11 @@ namespace ConsoleApplication
 
         public Deck(int numberofPlayers)
         {
-            cards = new Card[52 + numberofPlayers - 1];
+            cards = new Card[46 + numberofPlayers - 1];
         }
 
+
+        //Shuffles the deck
         public void shuffle()
         {
             int length = cards.Length;
@@ -27,11 +29,15 @@ namespace ConsoleApplication
             }
         }
 
+        //checks the number of cards in the deck
+        //returns the number of cards left
         public int cardsInDeck()
         {
             return cards.Length;
         }
 
+        //Deals the top card from the deck
+        //Returns the top card object
         public Card deal()
         {
             Card holder = cards[cards.Length-1];
@@ -39,6 +45,8 @@ namespace ConsoleApplication
             return holder;
         }
 
+
+        //Returns a string with the top three cards in the deck
         public string peek()
         {
             if (cardsInDeck() > 2) {
