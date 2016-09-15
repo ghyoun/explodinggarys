@@ -11,8 +11,30 @@ namespace ConsoleApplication
         public Player(string givenName)
         {
             name = givenName;
-            hand = new Card[];
+            hand = new Card[0];
             alive = true;
+        }
+
+        public void shuffleHand()
+        {
+            
+            int length = hand.Length;
+            Card t;
+            int index = 0;
+            Random rnd = new Random();
+            while (length > 0) {
+                index = rnd.Next(0, length-1);
+
+                t = hand[length-1];
+                hand[length-1] = hand[index];
+                hand[index] = t;
+                length--;
+            }
+        }
+
+        public Card drawCard(Deck ourDeck)
+        {
+
         }
     }
 
