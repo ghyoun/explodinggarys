@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace ConsoleApplication
 {
@@ -6,7 +7,23 @@ namespace ConsoleApplication
     public class Card
     {
         public string name; 
-        public string[] all_cards = {"Beard_Cat","CatterMelon","Hairy_Potato_Cat","Rainbow_Cat","Taco_Cat","Attack","Defuse","Exploding_Kitten","Favor","Nope","See_the_Future","Shuffle","Skip"};
+        public Dictionary<string,int> all_cards = new Dictionary<string,int>()
+        {
+            { "Beard_cat", 4 },
+            { "Cattermelon", 4 },
+            { "Hairy_potato_cat", 4 },
+            { "Rainbow_cat", 4 },
+            { "Taco_cat", 4 },
+            { "Attack", 4 },
+            { "Favor", 4 },
+            { "Nope", 5 },
+            { "See_future", 5 },
+            { "Shuffle", 4 },
+            { "Skip", 4 },
+
+        };
+           
+        // "Attack","Defuse","Exploding_Kitten","Favor","Nope","See_the_Future","Shuffle","Skip"};
         public Card(string cardName)
         {
             name = cardName;
@@ -30,7 +47,4 @@ namespace ConsoleApplication
 
 
     }
-
-      
-
 }
