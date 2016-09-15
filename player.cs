@@ -34,7 +34,10 @@ namespace ConsoleApplication
 
         public Card drawCard(Deck ourDeck)
         {
-
+            Card drawnCard = ourDeck.deal();
+            Array.Resize(ref hand, hand.Length+1);
+            hand[hand.Length-1] = drawnCard;
+            return drawnCard;
         }
     }
 

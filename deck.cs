@@ -31,6 +31,13 @@ namespace ConsoleApplication
         {
             return cards.Length;
         }
+
+        public Card deal()
+        {
+            Card holder = cards[cards.Length-1];
+            Array.Resize(ref cards, cards.Length-1);
+            return holder;
+        }
     }
 
     
