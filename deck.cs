@@ -1,14 +1,40 @@
 using System;
+using System.Collections.Generic;
+
 
 namespace ConsoleApplication
 {
     public class Deck
     {
         public Card[] cards;
+        public Dictionary<string,int> all_cards = new Dictionary<string,int>()
+        {
+            { "Beard_cat", 4 },
+            { "Cattermelon", 4 },
+            { "Hairy_potato_cat", 4 },
+            { "Rainbow_cat", 4 },
+            { "Taco_cat", 4 },
+            { "Attack", 4 },
+            { "Favor", 4 },
+            { "Nope", 5 },
+            { "See_future", 5 },
+            { "Shuffle", 4 },
+            { "Skip", 4 },
 
+        };
         public Deck(int numberofPlayers)
         {
-            cards = new Card[46 + numberofPlayers - 1];
+            cards = new Card[46];
+            int index = 0;
+            foreach(KeyValuePair<string, int> entry in all_cards)
+            {
+                // do something with entry.Value or entry.Key
+                for (int i = 0; i < entry.Value; i++)
+                {
+                    cards[index] = new Card(entry.Key);
+                    index++;
+                }
+            }
         }
 
 
