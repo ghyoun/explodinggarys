@@ -16,14 +16,13 @@ namespace ConsoleApplication
             { "Taco_cat", 4 },
             { "Attack", 4 },
             { "Favor", 4 },
-            { "Nope", 5},
+            { "Nope", 5 },
             { "See_future", 5 },
-            { "Shuffle", 4},
+            { "Shuffle", 4 },
             { "Skip", 4 },
 
         };
-        
-        
+           
         // "Attack","Defuse","Exploding_Kitten","Favor","Nope","See_the_Future","Shuffle","Skip"};
         public Card(string cardName)
         {
@@ -48,7 +47,4 @@ namespace ConsoleApplication
 
 
     }
-
-      
-
 }
