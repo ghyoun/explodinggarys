@@ -7,13 +7,14 @@ namespace ConsoleApplication
     {
         public string name; 
         // {"Beard_Cat","CatterMelon","Hairy_Potato_Cat","Rainbow_Cat","Taco_Cat",
-        //"Attack","Defuse","Exploding_Kitten","Favor","Nope","See_the_Future","Shuffle","Skip"}
+        //"Attack","Defuse,"Exploding_Kitten","Favor","Nope","See_the_Future","Shuffle","Skip"}
     
 
         public Card(string cardName)
         {
             name = cardName;
         }
+
      
         public object[] Attack()
         {
@@ -63,8 +64,7 @@ namespace ConsoleApplication
 
         public void Nope()
         {
-            // stop any action below the nope card at anytime execpt an exploidng kitten or defuse card 
-            
+
         }
 
 
