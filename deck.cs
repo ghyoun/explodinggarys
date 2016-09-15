@@ -38,6 +38,17 @@ namespace ConsoleApplication
             Array.Resize(ref cards, cards.Length-1);
             return holder;
         }
+
+        public string peek()
+        {
+            if (cardsInDeck() > 2) {
+                return "Top Card: " + cards[cards.Length-1].name + ", Next Card: " + cards[cards.Length-2].name + ", Next Card: " + cards[cards.Length-3].name;
+            } else if (cardsInDeck() > 1) {
+                return "Top Card: " + cards[cards.Length-1].name + ", Next Card: " + cards[cards.Length-2].name;
+            } else {
+                return "Top Card: " + cards[cards.Length-1].name;
+            }
+        }
     }
 
     

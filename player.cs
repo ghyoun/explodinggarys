@@ -39,6 +39,43 @@ namespace ConsoleApplication
             hand[hand.Length-1] = drawnCard;
             return drawnCard;
         }
+
+        public void getCard(Card newCard)
+        {
+            Array.Resize(ref hand, hand.Length+1);
+            hand[hand.Length-1] = newCard;
+        }
+
+        public void twoOfAKind(Player opponent, int handIndex)
+        {
+            getCard(takeCard(opponent, handIndex));
+        }
+
+        private Card takeCard(Player opponent, int handIndex)
+        {
+            Card holder = opponent.hand[handIndex];
+            if (handIndex != opponent.hand.Length-1)
+            {
+                for (int i = handIndex; i < opponent.hand.Length; i++)
+                {
+                    opponent.hand[i] = opponent.hand[i+1];
+                }
+            }
+            Array.Resize(ref opponent.hand, hand.Length-1);
+            return holder;
+        }
+
+        public bool contains(Card checkCard)
+        {
+            foreach(Card card in hand)
+            {
+                if (card.name == checkCard.name)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 
     
