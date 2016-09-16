@@ -37,6 +37,20 @@ namespace ConsoleApplication
             }
         }
 
+        public void addSpecificCard(Card specificCard)
+        {
+            Array.Resize(ref cards, cards.Length+1);
+            cards[cards.Length-1] = specificCard;
+        }
+
+        public void addSpecificCardSpecificIndex(Card specificCard, int index)
+        {
+            Array.Resize(ref cards, cards.Length+1);
+            for (int i = cards.Length-1; i > index; i--) {
+                cards[i] = cards[i-1];
+            }
+            cards[index] = specificCard;
+        }
 
         //Shuffles the deck
         public void shuffle()
